@@ -4,9 +4,9 @@ const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-[#1a2836] text-primary-content">
   <div>
-    <h2 >Mini wheels</h2>
+    <h1 className='text-3xl font-bold' >Mini wheels</h1>
     <p className="font-bold">
-      ACME Industries Ltd. <br/>Providing reliable tech since 1992
+      US TOY Industries Ltd. <br/>Providing reliable toy since 1992
     </p> 
     <p>Copyright © 2023 - All right reserved</p>
   </div> 
