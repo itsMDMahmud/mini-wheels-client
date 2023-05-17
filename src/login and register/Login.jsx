@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import SocialLogin from "./SocialLogin";
+
 
 const Login = () => {
 
-    const { signIn } = useContext(AuthContext);
+const { signIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -69,9 +71,10 @@ const Login = () => {
             <div className="form-control mt-6">
               <input type="submit" value="Login" className="btn bg-[#1a2836]" />
             </div>
+            <SocialLogin/>
             </form>
-            <p>Already have account? please 
-                <Link className="text-[#EA2027] font-semibold" to='/register'> Register</Link></p>
+            <p>New to here? 
+                <Link className="text-[#EA2027] font-semibold" to='/register'> Please Register</Link></p>
           </div>
         </div>
       </div>

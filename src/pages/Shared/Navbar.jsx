@@ -14,17 +14,16 @@ const Navbar = () => {
   // console.log(user);
 
   const navItems =  <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/alltoys'>All Toys</Link></li>
+        <li><Link to='/' className=' text-xl'>Home</Link></li>
+        <li><Link to='/alltoys' className=' text-xl'>All Toys</Link></li>
         {user?.email ? 
         <>
-          <li><Link to='/add'>Add Toy</Link></li>
-        <li><Link to='/mytoys'>My Toys</Link></li>
+          <li><Link to='/add' className=' text-xl'>Add Toy</Link></li>
+        <li><Link to='/mytoys' className=' text-xl'>My Toys</Link></li>
         </> : <></>
         
-        }
-               
-        <li><Link to='/blog'>Blog</Link></li>
+        }               
+        <li><Link to='/blog' className='text-xl'>Blog</Link></li>
     </>
   return (
         <div className="navbar bg-base-100">
@@ -47,7 +46,8 @@ const Navbar = () => {
   <div className="navbar-end">
       {user?.email ? 
       <>
-      <Link onClick={handleLogOut}><a className="btn bg-[#1a2836] primary-btn">logout</a></Link>
+      <img className='w-8 rounded-full' src={user?.photoURL} alt="img" title={user.displayName} />
+      <Link onClick={handleLogOut}><a className="btn bg-[#1a2836] primary-btn ml-2">logout</a></Link>
       </> :
       <Link to='login'><a className="btn bg-[#1a2836] primary-btn">Login</a></Link>
     }

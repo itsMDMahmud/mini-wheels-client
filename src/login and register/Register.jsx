@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import SocialLogin from './SocialLogin';
 
 
 const Register = () => {
@@ -84,7 +85,7 @@ const Register = () => {
             <div className="form-control mt-6">
               <input className="btn bg-[#1a2836]" type="submit" value="Sign Up" />
             </div>
-            {/* <SocialLogin/> */}
+            <SocialLogin/>
             </form>
             <p>Already have account? please 
                 <Link className="text-[#EA2027] font-semibold" to='/login'> Login</Link></p>
