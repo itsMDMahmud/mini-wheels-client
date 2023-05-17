@@ -34,28 +34,7 @@ const AuthProvider = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
             console.log('current user in auth provider', currentUser);
-            setLoading(false);
-            if (currentUser && currentUser.email) {
-                const loggedUser = {
-                    email: currentUser.email,
-                  }
-                fetch("https://car-doctor-server-eight-mu.vercel.app/jwt", {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(loggedUser),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log('jst response', data);
-            //warning: local storage is not the best (second best place) to store access token
-            localStorage.setItem('car-access-token', data.token);            
-          });
-            }
-            else{
-                localStorage.removeItem('car-access-token')
-            }
+            setLoading(false);           
         });
         return () => {
             return unsubscribe()
