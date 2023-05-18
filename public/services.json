@@ -1,0 +1,75 @@
+[
+    {
+        "service_id": "01",
+        "toyName": "Mercedes G Wagon",
+        "categoryName": "Toy SUV",
+        "sellerName": "Mr Bristol",
+        "sellerEmail": "bristol@gmail.com",
+        "img": "https://i5.walmartimages.com/asr/0a990681-dc1d-41cc-bb33-e534cd9f84ce.6242336e9b8b9b8d0e24d8b775d35ec4.jpeg",
+        "price": "200.00",
+        "quantity": "180",
+        "rating": "4.6",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam!"        
+    },
+    {
+        "service_id": "01",
+        "toyName": "Mercedes AMG s63",
+        "categoryName": "Toy Coupe",
+        "sellerName": "Andres leo",
+        "sellerEmail": "andres@gmail.com",
+        "img": "https://i5.walmartimages.com/asr/0f021146-aa8f-4e79-a949-bbe3014b992a.8bbc77554fc0c41ba8860a9221f0f80a.jpeg",
+        "price": "20.00",
+        "quantity": "180",
+        "rating": "4.6",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam!"        
+    },
+    {
+        "service_id": "02",
+        "toyName": "Audi RS Q8",
+        "categoryName": "Toy SUV",
+        "sellerName": "John desso",
+        "sellerEmail": "desso@gmail.com",
+        "img": "https://i5.walmartimages.com/asr/3e31e783-b5ed-456d-8fa2-364544ebc7d6.e271adc343081a0663542d9d1866a220.jpeg",
+        "price": "250.00",
+        "quantity": "180",
+        "rating": "4.6",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam!"        
+    },
+    {
+        "service_id": "02",
+        "toyName": "Audi RS Roadstar",
+        "categoryName": "Toy Coupe",
+        "sellerName": "Brian pitt",
+        "sellerEmail": "brian@gmail.com",
+        "img": "https://i5.walmartimages.com/asr/98dacaea-b9ce-4c45-9dcc-c99625bbecd2.cb7c2044b6cafe7b1c911cb6cc2b7a9a.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+        "price": "189.00",
+        "quantity": "80",
+        "rating": "4.6",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam!"        
+    },
+    {
+        "service_id": "03",
+        "toyName": "Dodge Durango SRT",
+        "categoryName": "Toy SUV",
+        "sellerName": "Ullu prikka",
+        "sellerEmail": "prikka@gmail.com",
+        "img": "https://i5.walmartimages.com/asr/c43dcf52-e2b2-4b90-aaac-f838b10a95e9.fb5a78f6e543f6a3f07847c93c05f524.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+        "price": "20.00",
+        "quantity": "180",
+        "rating": "4.6",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam!"        
+    },
+    {
+        "service_id": "03",
+        "toyName": "Dodge challanger SRT",
+        "categoryName": "Toy Coupe",
+        "sellerName": "john statham",
+        "sellerEmail": "statham@gmail.com",
+        "img": "https://i5.walmartimages.com/asr/d30e02bb-7c3c-4321-9b29-f1194c8abf03.018ede83b8534b76f14a5df5884b9430.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+        "price": "239.00",
+        "quantity": "280",
+        "rating": "4.7",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam!"        
+    }
+    
+]
