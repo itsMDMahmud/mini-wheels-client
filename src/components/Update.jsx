@@ -35,7 +35,7 @@ const Update = () => {
         }
         // console.log(updateDetails);
     
-        fetch(`http://localhost:5000/mytoys/${_id}`, {
+        fetch(`https://mini-wheels-server-five.vercel.app/mytoys/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type' : 'application/json'

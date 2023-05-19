@@ -32,7 +32,7 @@ const Add_A_Toy = () => {
         }
         console.log(addAToy);
     
-        fetch('http://localhost:5000/mytoys/', {
+        fetch('https://mini-wheels-server-five.vercel.app/mytoys/', {
             method: 'post',
             headers: {
                 'content-type' : 'application/json'

@@ -9,7 +9,7 @@ const MyToys = () => {
 //   const navigate = useNavigate();
   const [myToys, setMyToys] = useState([]);
 
-  const url = `http://localhost:5000/mytoys?email=${user?.email}`;
+  const url = `https://mini-wheels-server-five.vercel.app/mytoys?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -22,7 +22,7 @@ const MyToys = () => {
   const handleDelete = _id => {
     const proceed = confirm('Are you sure you want to delete?');
     if (proceed) {
-        fetch(`http://localhost:5000/mytoys/${_id}`, {
+        fetch(`https://mini-wheels-server-five.vercel.app/mytoys/${_id}`, {
             'method': 'DELETE'
         })
         .then(res => res.json())

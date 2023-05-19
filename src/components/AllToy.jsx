@@ -10,7 +10,7 @@ const AllToy = () => {
   }
 
   useEffect(() => {
-    fetch("http://localhost:5000/toylist")
+    fetch("https://mini-wheels-server-five.vercel.app/toylist")
       .then((res) => res.json())
       .then((data) => setAlltoys(data));
   }, []);
