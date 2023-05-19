@@ -40,7 +40,7 @@ const MyToys = () => {
 
   return (
     <div>
-      {/* <h2>alltoy items: {alltoys.length}</h2> */}
+      
       <div className="overflow-x-auto w-full">
         <table className="table w-full text-center">
           {/* head */}

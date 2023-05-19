@@ -8,12 +8,7 @@ const CarDetails = () => {
     const details = useLoaderData();
     console.log(details);
     const { _id, toyName,categoryName, sellerName, email, img,  description, price, rating } = details;
-    // console.log(details);
-//   const [toyDetails, setToyDetails] = useState([]);
-
-//   
-
-//   const toyData = toyDetails.find((toy) => toy._id == _id);
+    
 
     return (
         <div className="hero min-h-screen bg-base-200">

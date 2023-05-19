@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
-const Add_A_Toy = () => {
+const Update = () => {
+    const updatesAllData = useLoaderData();
+    // console.log(updatesAllData);
+    const { _id, toyName, categoryName, img, service, price, quantity, rating, description } = updatesAllData;
 
     const {user} = useContext(AuthContext);
 
-    const handleAddtoy = event => {
+    const handleUpdate = event => {
         event.preventDefault();
         const form = event.target;
         const toyName = form.toyName.value;
@@ -19,7 +22,7 @@ const Add_A_Toy = () => {
         const rating = form.rating.value;    
         const description = form.description.value;    
     
-        const addAToy = {
+        const updateDetails = {
             toyName,
             categoryName,
             sellerName,
@@ -30,41 +33,41 @@ const Add_A_Toy = () => {
             description,
             rating,
         }
-        console.log(addAToy);
+        // console.log(updateDetails);
     
-        fetch('http://localhost:5000/mytoys/', {
-            method: 'post',
+        fetch(`http://localhost:5000/mytoys/${_id}`, {
+            method: 'PATCH',
             headers: {
                 'content-type' : 'application/json'
             },
-            body: JSON.stringify(addAToy)
+            body: JSON.stringify(updateDetails)
         })
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            if (data.insertedId) {
-                alert('added successfully')
+            if (data.modifiedCount> 0) {
+                alert('Updateded successfully')
             }
         })
       }
 
     return (
         <div>
-        <h2 className='my-5 text-4xl font-semibold text-center text-[#1a2836]' >Add a toy..</h2>
-        <form onSubmit={handleAddtoy} >
+        <h2 className='my-5 text-4xl font-semibold text-center text-[#1a2836]' >Update details</h2>
+        <form onSubmit={handleUpdate} >
         <div className="card-body">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <div className="form-control">          
-            <input type="text" defaultValue =''  placeholder="Toy Name" name="toyName" className="input input-bordered" />
+            <input type="text" defaultValue ={toyName}  placeholder="Toy Name" name="toyName" className="input input-bordered" />
           </div>
           <div className="form-control">          
-            <input type="text" defaultValue ='' required placeholder="Toy Category" name="category" className="input input-bordered" />
+            <input type="text" defaultValue ={categoryName} required placeholder="Toy Category" name="category" className="input input-bordered" />
           </div>
           <div className="form-control">          
-            <input type="text" defaultValue ='' required placeholder="Image URL" name="url" className="input input-bordered" />
+            <input type="text" defaultValue ={img} required placeholder="Image URL" name="url" className="input input-bordered" />
           </div>
           <div className="form-control">          
-            <input type="text" defaultValue ='' required placeholder="Price" name="price" className="input input-bordered" />
+            <input type="text" defaultValue ={price} required placeholder="Price" name="price" className="input input-bordered" />
           </div>
           <div className="form-control">          
             <input type="text" defaultValue ={user?.displayName} readOnly placeholder="Seller Name" name="sellerName"  className="input input-bordered" />
@@ -73,14 +76,14 @@ const Add_A_Toy = () => {
           <input type="email" defaultValue = {user?.email} readOnly placeholder="Seller Email" name="email" className="input input-bordered"/>          
           </div>
           <div className="form-control">          
-            <input type="text" placeholder="Available quantity" required name="quantity" className="input input-bordered" />
+            <input type="text" defaultValue={quantity} placeholder="Available quantity" required name="quantity" className="input input-bordered" />
           </div>
           <div className="form-control">          
-            <input type="text" defaultValue ='' placeholder="Rating (1 - 5)*" required name="rating" className="input input-bordered" />
+            <input type="text" defaultValue ={rating} placeholder="Rating (1 - 5)*" required name="rating" className="input input-bordered" />
           </div>               
           </div>
           <div className="form-control mt-5">          
-          <textarea type="text" placeholder="Add toy details" required name="description" className="input input-bordered md:h-40"/>
+          <textarea type="text" defaultValue={description} placeholder="Add toy details" required name="description" className="input input-bordered md:h-40"/>
           
           </div>
           <div className="form-control mt-6">
@@ -92,4 +95,4 @@ const Add_A_Toy = () => {
     );
 };
 
-export default Add_A_Toy;
+export default Update;

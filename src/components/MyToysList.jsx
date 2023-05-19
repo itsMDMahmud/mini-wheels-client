@@ -31,7 +31,7 @@ const MyToysList = ({myToy, user, handleDelete}) => {
                         <div className='text-xl'>{email}</div>
                     </td>
                     <th className=''>
-                        <Link to={`details/${_id}`}><button className="btn">edit</button></Link> 
+                        <Link to={`update/${_id}`}><button className="btn">Update</button></Link> 
                         
                         <button onClick={()=> handleDelete (_id)} className="btn btn-circle bg-[#da0808] text-white border-white align-middle ml-3">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
