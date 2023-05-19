@@ -23,7 +23,7 @@ const Blog = () => {
         SQL (Structured Query Language) and NoSQL (Not only SQL) databases are two different approaches to storing and managing data. Here are some key points of comparison between the two: 
         <br />
         <br />
-        <h2>Data Model:</h2>
+        <h2 className="text-2xl">Data Model:</h2>
           <ul>
             <li>SQL databases follow a relational data model where data is organized into tables with predefined schemas. Each table consists of rows and columns, and relationships between tables are established using primary and foreign keys. <br />
           </li>
@@ -32,14 +32,14 @@ const Blog = () => {
           </li>
           </ul>
            <br />
-          <h2>Scalability:</h2>
+          <h2 className="text-2xl">Scalability:</h2>
           <ul>
             <li>SQL databases typically scale vertically, meaning they are designed to run on a single server and handle increased load by upgrading the hardware resources (CPU, RAM, etc.) of that server.</li>
             <br />
             <li>SQL databases typically scale vertically, meaning they are designed to run on a single server and handle increased load by upgrading the hardware resources (CPU, RAM, etc.) of that server.</li>
           </ul>
           <br />
-          <h2>Schema Flexibility:</h2>
+          <h2 className="text-2xl">Schema Flexibility:</h2>
           <ul>
             <li>SQL databases enforce a predefined schema, meaning the structure of the data must be defined upfront. Any changes to the schema require altering the table structure, which can be time-consuming and potentially impact existing data.</li>
             <li>NoSQL databases offer schema flexibility as they don't require a fixed schema. This allows for dynamic and evolving data structures, making it easier to accommodate changes to data without significant disruptions</li>
@@ -57,7 +57,7 @@ const Blog = () => {
         <h2 className="text-2xl">Key features of Express.js include:</h2>        
           <ul>
             <li>Routing: Express.js allows developers to define routes and handle HTTP requests for specific endpoints. It supports various HTTP methods such as GET, POST, PUT, DELETE, etc., and provides an intuitive way to handle different request types.</li>
-            <li>Middleware: Express.js utilizes middleware functions to process requests before they reach the route handlers. Middleware functions can perform tasks such as logging, authentication, data parsing, error handling, etc. It allows developers to modularize their code and apply common functionality across multiple routes.</li>
+            <li >Middleware: Express.js utilizes middleware functions to process requests before they reach the route handlers. Middleware functions can perform tasks such as logging, authentication, data parsing, error handling, etc. It allows developers to modularize their code and apply common functionality across multiple routes.</li>
             <li>Templating: Express.js supports various template engines such as EJS, Pug (formerly Jade), Handlebars, etc., enabling developers to dynamically generate HTML pages with data from the server.</li>
             <li>Extensibility: Express.js is highly extensible, with a rich ecosystem of third-party middleware and libraries available. These extensions provide additional functionality, such as session management, authentication strategies, API documentation generation, database integration, and more.</li>
           </ul>

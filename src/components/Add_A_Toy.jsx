@@ -14,19 +14,21 @@ const Add_A_Toy = () => {
         const img = form.url.value; 
         const price = form.price.value; 
         const sellerName = user?.displayName;
-        const sellerEmail = user?.email;
+        const email = user?.email;
         const quantity = form.quantity.value;    
-        const details = form.details.value;    
+        const rating = form.rating.value;    
+        const description = form.description.value;    
     
         const addAToy = {
             toyName,
             categoryName,
             sellerName,
-            sellerEmail,
+            email,
             img,
             price,
             quantity,
-            details,
+            description,
+            rating,
         }
         console.log(addAToy);
     
@@ -68,17 +70,17 @@ const Add_A_Toy = () => {
             <input type="text" defaultValue ={user?.displayName} readOnly placeholder="Seller Name" name="sellerName"  className="input input-bordered" />
           </div>
           <div className="form-control">          
-          <input type="email" defaultValue = {user?.email} readOnly placeholder="Seller Email" name="sellerEmail" className="input input-bordered"/>          
+          <input type="email" defaultValue = {user?.email} readOnly placeholder="Seller Email" name="email" className="input input-bordered"/>          
           </div>
           <div className="form-control">          
             <input type="text" placeholder="Available quantity" required name="quantity" className="input input-bordered" />
           </div>
           <div className="form-control">          
-            <input type="text" defaultValue ='' placeholder="Shop Name" name="shopName" className="input input-bordered" />
+            <input type="text" defaultValue ='' placeholder="Rating (1 - 5)*" required name="rating" className="input input-bordered" />
           </div>               
           </div>
           <div className="form-control mt-5">          
-          <textarea type="text" placeholder="Add toy details" required name="details" className="input input-bordered md:h-40"/>
+          <textarea type="text" placeholder="Add toy details" required name="description" className="input input-bordered md:h-40"/>
           
           </div>
           <div className="form-control mt-6">

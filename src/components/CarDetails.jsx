@@ -6,7 +6,8 @@ import { useLoaderData, useParams } from 'react-router-dom';
 const CarDetails = () => {
 
     const details = useLoaderData();
-    const { _id, toyName,categoryName, sellerName, sellerEmail, img, service, price, rating } = details;
+    console.log(details);
+    const { _id, toyName,categoryName, sellerName, email, img,  description, price, rating } = details;
     // console.log(details);
 //   const [toyDetails, setToyDetails] = useState([]);
 
@@ -29,10 +30,10 @@ const CarDetails = () => {
                         </h2>
       <h2  className="text-xl mb-3 font-bold">$ {price}</h2>
       <h2  className="text-xl mb-3">{sellerName}</h2>
-      <h2  className="text-xl mb-3">{sellerEmail}</h2>
+      <h2  className="text-xl mb-3">{email}</h2>
 
-      <p className="py-6 text-xl">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      {/* <button className="btn btn-outline btn-primary">boy now</button> */}
+      <p className="py-6 text-xl">{description}</p>
+      
     </div>
   </div>
 </div>

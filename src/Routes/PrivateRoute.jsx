@@ -10,7 +10,7 @@ const PrivateRoute = ({children}) => {
 
     // console.log('user in a private route', user);
     if(loading){
-        return <Spinner animation="border" variant="secondary" />
+        return <button className="btn loading">loading</button>
     }
     
 
