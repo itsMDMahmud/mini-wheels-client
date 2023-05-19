@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaBeer, FaStar } from 'react-icons/fa';
+import { FaBeer, FaRegStar, FaStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const Toylist = ({alltoy}) => {
@@ -20,10 +21,13 @@ const Toylist = ({alltoy}) => {
                     </td>
                     <th> 
                         <div className='text-3xl mb-3'>{toyName}</div> 
-                        <div className='text-xl'>{categoryName}</div> </th>
+                        <div className='text-xl'><small>Category:</small> {categoryName}</div> </th>
                     <td className='text-center'>
                         <div className='text-2xl mb-3'>$ {price}</div>    
-                        <div className='text-xl inline-flex gap-2'> {rating} <FaStar/></div>
+                        <div className='text-xl inline-flex gap-2'>
+                        {rating} <Rating placeholderRating={rating}
+              emptySymbol={<FaRegStar/>} readonly placeholderSymbol={<FaStar/>}  fullSymbol={<FaStar/>}/>
+                        </div>
                     </td>  
                     <td>
                         <div className='text-2xl mb-3'>{sellerName}</div>

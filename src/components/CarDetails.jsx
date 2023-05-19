@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { FaRegStar, FaStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 import { useLoaderData, useParams } from 'react-router-dom';
 
 const CarDetails = () => {
@@ -19,14 +21,17 @@ const CarDetails = () => {
         <img src={img} className=' rounded-3xl ' />
     </div>
     <div className=' lg:w-1/2'>
-      <h1 className="text-4xl font-bold mb-5">{toyName}</h1>
-      <h2  className="text-xl font-bold mb-3">{categoryName}</h2>
-      <h2  className="text-xl mb-3">{rating}</h2>
+      <h1 className="text-5xl font-bold mb-5">{toyName}</h1>
+      <h2  className="text-xl font-bold mb-3"> <small>Category: </small>{categoryName}</h2>
+      <h2  className="text-xl mb-3">
+                        {rating} <Rating placeholderRating={rating}
+              emptySymbol={<FaRegStar/>} readonly placeholderSymbol={<FaStar/>}  fullSymbol={<FaStar/>}/>
+                        </h2>
       <h2  className="text-xl mb-3 font-bold">$ {price}</h2>
       <h2  className="text-xl mb-3">{sellerName}</h2>
       <h2  className="text-xl mb-3">{sellerEmail}</h2>
 
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      <p className="py-6 text-xl">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
       {/* <button className="btn btn-outline btn-primary">boy now</button> */}
     </div>
   </div>

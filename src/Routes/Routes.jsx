@@ -9,6 +9,7 @@ import Blog from "../components/Blog";
 import Login from "../login and register/Login";
 import Register from "../login and register/Register";
 import CarDetails from "../components/CarDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: "alltoys/details/:_id",
-        element: <CarDetails></CarDetails>, 
+        element: <PrivateRoute><CarDetails></CarDetails></PrivateRoute>, 
         loader: ({params}) => fetch(`http://localhost:5000/toylist/${params._id}`)
       },
       {
