@@ -87,7 +87,7 @@ const Update = () => {
           
           </div>
           <div className="form-control mt-6">
-            <button className="btn font-bold text-3xl bg-[#1a2836]">Add Item</button>
+            <button className="btn font-bold text-3xl bg-[#1a2836]">update</button>
           </div>
         </div>
         </form>

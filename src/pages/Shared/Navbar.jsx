@@ -14,16 +14,16 @@ const Navbar = () => {
   // console.log(user);
 
   const navItems =  <>
-        <li><Link to='/' className=' text-xl'>Home</Link></li>
-        <li><Link to='/alltoys' className=' text-xl'>All Toys</Link></li>
+        <li><Link to='/' className=' text-xl font-semibold'>Home</Link></li>
+        <li><Link to='/alltoys' className=' text-xl font-semibold'>All Toys</Link></li>
         {user?.email ? 
         <>
-          <li><Link to='/add' className=' text-xl'>Add Toy</Link></li>
-        <li><Link to='/mytoys' className=' text-xl'>My Toys</Link></li>
+          <li><Link to='/add' className=' text-xl font-semibold'>Add Toy</Link></li>
+        <li><Link to='/mytoys' className=' text-xl font-semibold'>My Toys</Link></li>
         </> : <></>
         
         }               
-        <li><Link to='/blog' className='text-xl'>Blog</Link></li>
+        <li><Link to='/blog' className='text-xl font-semibold'>Blog</Link></li>
     </>
   return (
         <div className="navbar bg-base-100">
@@ -36,7 +36,9 @@ const Navbar = () => {
         {navItems}
       </ul>
     </div>
-    <Link to='/' className="btn btn-ghost normal-case text-5xl font-bold"><h1>Mini Wheels</h1></Link>
+    <Link to='/' className="btn btn-ghost normal-case text-5xl font-bold">
+      <img className='w-40' src="https://i.ibb.co/BPCN4Xg/c8c5e900976f480780e7bd1cf6d6e1e7-1-removebg-preview-1.png" alt="" />
+    </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

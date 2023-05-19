@@ -8,7 +8,7 @@ const ErrorPage = () => {
         <div className='error-page'>
              <Lottie className='error-animation' animationData={errorAnimation} loop={true}></Lottie>
              <div  className='error-btn-div'>
-             <Link to="/"><button className="btn btn-error">Go to home</button></Link>
+             <Link to="/"><button className="btn bg-[#1a2836]">Go to home</button></Link>
              </div>
             
             
