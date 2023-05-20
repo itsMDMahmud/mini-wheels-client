@@ -8,21 +8,45 @@ const MyToys = () => {
 //   console.log(user?.email);
 //   const navigate = useNavigate();
   const [myToys, setMyToys] = useState([]);
+  const [sortOrder, setSortOrder] = useState('asc');
 
-  const url = `https://mini-wheels-server-five.vercel.app/mytoys?email=${user?.email}`;
   useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-          setMyToys(data)}
-      );
-  }, [url]);
+    fetchData();
+  }, [sortOrder]);
+
+  const fetchData = async () => {
+    try {
+      const url = `http://localhost:5000/mytoys?email=${user?.email}&sort=${sortOrder}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      setMyToys(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  const handleSortAscending = () => {
+    setSortOrder('asc');
+  };
+
+  const handleSortDescending = () => {
+    setSortOrder('desc');
+  };
+
+  // const url = `http://localhost:5000/mytoys?email=${user?.email}`;
+  // useEffect(() => {
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //         setMyToys(data)}
+  //     );
+  // }, [url]);
 
 
   const handleDelete = _id => {
     const proceed = confirm('Are you sure you want to delete?');
     if (proceed) {
-        fetch(`https://mini-wheels-server-five.vercel.app/mytoys/${_id}`, {
+        fetch(`http://localhost:5000/mytoys/${_id}`, {
             'method': 'DELETE'
         })
         .then(res => res.json())
@@ -39,8 +63,12 @@ const MyToys = () => {
 
 
   return (
-    <div>
-      
+    <div className="my-20">
+      <div className="text-center">
+      <button className="btn mx-3" onClick={handleSortAscending}>Ascending</button>
+      <button className="btn mx-3" onClick={handleSortDescending}>Descending</button>
+      {/* Render the toy list */}
+      </div>
       <div className="overflow-x-auto w-full">
         <table className="table w-full text-center">
           {/* head */}

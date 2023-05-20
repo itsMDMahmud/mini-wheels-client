@@ -1,11 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
 const ReactTab = () => {
+  const [isButton1Disabled, setIsButton1Disabled] = useState(false);
+  const [isButton2Disabled, setIsButton2Disabled] = useState(false);
+  const [isButton3Disabled, setIsButton3Disabled] = useState(false);
+  const [isButton4Disabled, setIsButton4Disabled] = useState(false);
+  const [isButton5Disabled, setIsButton5Disabled] = useState(false);
+  const [isButton6Disabled, setIsButton6Disabled] = useState(false);
+
+  function handleClick1() {
+    setIsButton1Disabled(true);
+  }
+  function handleClick2() {
+    setIsButton2Disabled(true);
+  }
+  function handleClick3() {
+    setIsButton3Disabled(true);
+  }
+  function handleClick4() {
+    setIsButton4Disabled(true);
+  }
+  function handleClick5() {
+    setIsButton5Disabled(true);
+  }
+  function handleClick6() {
+    setIsButton6Disabled(true);
+  }
+
+
   return (
-    <div>
+    <div className="lg:my-20">
+      <h2 className="mb-10 text-5xl text-center">Sub Categories</h2>
       <Tabs>
         <TabList>
           <Tab><h2 className="text-xl font-semibold">Toy SUV</h2></Tab>
@@ -50,7 +78,8 @@ const ReactTab = () => {
                     <div className="text-xl">bristol@gmail.com</div>
                   </td>
                   <th className="">
-                    <button className="btn ">Details</button>
+                    <button className="btn bg-[#eb4d4b]" disabled={isButton1Disabled} onClick={() => 
+              handleClick1() }>favorite</button>
                   </th>
                 </tr>
                 {/* --------------------------------------------------  */}
@@ -77,7 +106,8 @@ const ReactTab = () => {
                     <div className="text-xl">bristol@gmail.com</div>
                   </td>
                   <th className="">
-                    <button className="btn">Details</button>
+                  <button className="btn bg-[#eb4d4b]" disabled={isButton2Disabled} onClick={() => 
+              handleClick2() }>favorite</button>
                   </th>
                 </tr>
               </tbody>
@@ -122,7 +152,8 @@ const ReactTab = () => {
                     <div className="text-xl">andres@gmail.com</div>
                   </td>
                   <th className="">
-                    <button className="btn">Details</button>
+                  <button className="btn bg-[#eb4d4b]" disabled={isButton3Disabled} onClick={() => 
+              handleClick3() }>favorite</button>
                   </th>
                 </tr>
                 {/* --------------------------------------------------  */}
@@ -149,7 +180,8 @@ const ReactTab = () => {
                     <div className="text-xl">andres@gmail.com</div>
                   </td>
                   <th className="">
-                    <button className="btn">Details</button>
+                  <button className="btn bg-[#eb4d4b]" disabled={isButton4Disabled} onClick={() => 
+              handleClick4() }>favorite</button>
                   </th>
                 </tr>
               </tbody>
@@ -193,7 +225,8 @@ const ReactTab = () => {
                     <div className="text-xl">brian@gmail.com</div>
                   </td>
                   <th className="">
-                    <button className="btn">Details</button>
+                  <button className="btn bg-[#eb4d4b]" disabled={isButton5Disabled} onClick={() => 
+              handleClick5() }>favorite</button>
                   </th>
                 </tr>
                 {/* --------------------------------------------------  */}
@@ -220,7 +253,8 @@ const ReactTab = () => {
                     <div className="text-xl">brian@gmail.com</div>
                   </td>
                   <th className="">
-                    <button className="btn">Details</button>
+                  <button className="btn bg-[#eb4d4b] " disabled={isButton6Disabled} onClick={() => 
+              handleClick6() }>favorite</button>
                   </th>
                 </tr>
               </tbody>

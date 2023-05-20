@@ -1,13 +1,8 @@
 import React from "react";
 import ReactTab from "./ReactTab";
-import { Tab, Tabs } from "@mui/material";
 
 const Homepage = () => {
-//     const [value, setValue] = React.useState(0);
 
-//   const handleChange = (event, newValue) => {
-//     setValue(newValue);
-//   };
   return (
     <div className="my-5">
       <div className="hero">
@@ -26,20 +21,11 @@ const Homepage = () => {
         </div>
       </div>
       <ReactTab/>
-      {/* <ReactTab></ReactTab> */}
-      {/* <div>
-      <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example" centered >
-        <Tab label="one">   <h2 className="text-5xl">button one</h2>      
-        </Tab>
-        
-        <Tab label="two">         
-        </Tab>
-        
-        <Tab label="three">         
-        </Tab>
 
-      </Tabs>
-      </div> */}
+      <div>
+        
+      </div>
+      
     </div>
   );
 };

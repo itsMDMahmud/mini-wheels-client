@@ -8,16 +8,22 @@ const AllToy = () => {
   const showMoreItems = () => {
     setVisible((prevValue) => prevValue + 20);
   }
+  
+  
 
   useEffect(() => {
-    fetch("https://mini-wheels-server-five.vercel.app/toylist")
+    fetch("http://localhost:5000/toylist")
       .then((res) => res.json())
       .then((data) => setAlltoys(data));
   }, []);
+
+
+
   return (
     <div>
       {/* <h2>alltoy items: {alltoys.length}</h2> */}
       <div className="overflow-x-auto w-full">
+       
         <table className="table w-full text-center">
           {/* head */}
           <thead>
