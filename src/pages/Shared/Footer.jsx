@@ -4,7 +4,8 @@ const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-[#1a2836] text-primary-content">
   <div>
-    <h1 className='text-3xl font-bold' >Mini wheels</h1>
+    {/* <h1 className='text-3xl font-bold' >Mini wheels</h1> */}
+    <img src="https://i.ibb.co/BPCN4Xg/c8c5e900976f480780e7bd1cf6d6e1e7-1-removebg-preview-1.png" alt="" />
     <p className="font-bold">
       US TOY Industries Ltd. <br/>Providing reliable toy since 1992
     </p> 

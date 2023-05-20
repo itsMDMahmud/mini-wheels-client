@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Toylist from "./Toylist";
+import useTitle from "../hooks/useTitle";
 
 const AllToy = () => {
+  useTitle('All Toys');
   const [alltoys, setAlltoys] = useState([]);
   const [visible, setVisible] = useState(20);
 

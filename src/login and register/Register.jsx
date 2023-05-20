@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import SocialLogin from './SocialLogin';
+import useTitle from '../hooks/useTitle';
 
 
 const Register = () => {
-
+    useTitle('Sign Up');
     const {createUser} = useContext(AuthContext);
 
     const handleSignUp = event => {

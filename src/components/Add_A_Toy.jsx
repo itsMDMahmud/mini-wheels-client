@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import useTitle from '../hooks/useTitle';
 
 const Add_A_Toy = () => {
-
+    useTitle('Add Toy');
     const {user} = useContext(AuthContext);
 
     const handleAddtoy = event => {

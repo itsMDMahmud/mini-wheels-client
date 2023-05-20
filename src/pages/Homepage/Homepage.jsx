@@ -1,8 +1,9 @@
 import React from "react";
 import ReactTab from "./ReactTab";
+import useTitle from "../../hooks/useTitle";
 
 const Homepage = () => {
-
+  useTitle('Home');
   return (
     <div className="my-5">
       <div className="hero">

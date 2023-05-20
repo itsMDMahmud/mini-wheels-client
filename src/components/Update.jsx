@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import useTitle from '../hooks/useTitle';
 
 const Update = () => {
+    useTitle('Update');
     const updatesAllData = useLoaderData();
     // console.log(updatesAllData);
     const { _id, toyName, categoryName, img, service, price, quantity, rating, description } = updatesAllData;

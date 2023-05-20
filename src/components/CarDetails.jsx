@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useLoaderData, useParams } from 'react-router-dom';
+import useTitle from '../hooks/useTitle';
 
 const CarDetails = () => {
-
+    useTitle('Details');
     const details = useLoaderData();
     console.log(details);
     const { _id, toyName,categoryName, sellerName, email, img,  description, price, rating } = details;
