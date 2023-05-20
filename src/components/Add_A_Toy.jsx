@@ -68,7 +68,7 @@ const Add_A_Toy = () => {
             <input type="text" defaultValue ='' required placeholder="Price" name="price" className="input input-bordered" />
           </div>
           <div className="form-control">          
-            <input type="text" defaultValue ={user?.displayName} readOnly placeholder="Seller Name" name="sellerName"  className="input input-bordered" />
+            <input type="text" defaultValue ={user?.displayName}  placeholder="Seller Name" name="sellerName"  className="input input-bordered" />
           </div>
           <div className="form-control">          
           <input type="email" defaultValue = {user?.email} readOnly placeholder="Seller Email" name="email" className="input input-bordered"/>          

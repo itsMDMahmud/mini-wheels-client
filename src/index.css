@@ -15,6 +15,16 @@
   align-items: center;
   justify-content: center;
 }
-.primary-btn{
-  
+
+
+
+@media (max-width: 576px) {
+  .reactTab-thead{
+    display: none;
+  }
+  .reactTab{
+    display: flex;
+    flex-direction: column;
+  }
+ 
 }

@@ -3,6 +3,7 @@ import useTitle from "../../hooks/useTitle";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import ReactTab from "../ReactTab/ReactTab";
+import Slider from "./Slider";
 
 const Homepage = () => {
   useEffect(() => {
@@ -29,10 +30,13 @@ const Homepage = () => {
       </div >
       
 
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <div className="mt-20" data-aos="fade-up" data-aos-duration="1000">
         <ReactTab/>        
       </div>
       
+      <div className="mt-20" data-aos="fade-up" data-aos-duration="1000">
+          <Slider/>
+      </div>
     </div>
   );
 };

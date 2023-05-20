@@ -39,7 +39,7 @@ const AllToy = () => {
         <div class="flex items-center">
           <input type="text" onChange={(event) => setSearchText(event.target.value)}
           placeholder="Search" class="w-full px-4 py-2 mr-2 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:outline-none" />
-          <button onClick={handleSearch} class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Search</button>
+          <button onClick={handleSearch} class="px-4 py-2 bg-[#1a2836] text-white rounded-lg hover:bg-gray-600">Search</button>
         </div>
       </div>
 
@@ -55,6 +55,7 @@ const AllToy = () => {
               <th>seller</th>
               <th className="">Details</th>
             </tr>
+            
           </thead>
           <tbody>
                {
@@ -72,7 +73,10 @@ const AllToy = () => {
                 <button className="btn hidden mx-auto" onClick={showMoreItems}>See more</button>
                 </div> 
                 :
-                <button className="btn " onClick={showMoreItems}>See more</button>
+                <div className="text-center">
+                  <button className="btn btn-error mx-auto my-5" onClick={showMoreItems}>See more</button>
+                </div>
+                
             }
             
       </div>

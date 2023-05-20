@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
@@ -15,15 +15,15 @@ const Navbar = () => {
 
   const navItems =  <>
         <li><Link to='/' className=' text-xl font-semibold'>Home</Link></li>
-        <li><Link to='/alltoys' className=' text-xl font-semibold'>All Toys</Link></li>
+        <li><NavLink to='/alltoys' className=' text-xl font-semibold'>All Toys</NavLink></li>
         {user?.email ? 
         <>
-          <li><Link to='/add' className=' text-xl font-semibold'>Add Toy</Link></li>
-        <li><Link to='/mytoys' className=' text-xl font-semibold'>My Toys</Link></li>
+          <li><NavLink to='/add' className=' text-xl font-semibold'>Add Toy</NavLink></li>
+        <li><NavLink to='/mytoys' className=' text-xl font-semibold'>My Toys</NavLink></li>
         </> : <></>
         
         }               
-        <li><Link to='/blog' className='text-xl font-semibold'>Blog</Link></li>
+        <li><NavLink to='/blog' className='text-xl font-semibold'>Blog</NavLink></li>
     </>
   return (
         <div className="navbar bg-base-100">

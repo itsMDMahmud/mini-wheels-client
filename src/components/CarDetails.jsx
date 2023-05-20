@@ -7,8 +7,8 @@ import useTitle from '../hooks/useTitle';
 const CarDetails = () => {
     useTitle('Details');
     const details = useLoaderData();
-    console.log(details);
-    const { _id, toyName,categoryName, sellerName, email, img,  description, price, rating } = details;
+    // console.log(details);
+    const { _id, toyName,categoryName, sellerName, email, img,  description, price, rating, quantity } = details;
     
 
     return (
@@ -20,11 +20,12 @@ const CarDetails = () => {
     <div className=' lg:w-1/2'>
       <h1 className="text-5xl font-bold mb-5">{toyName}</h1>
       <h2  className="text-xl font-bold mb-3"> <small>Category: </small>{categoryName}</h2>
-      <h2  className="text-xl mb-3">
+      <h2  className="text-xl mb-3 font-bold">
                         {rating} <Rating placeholderRating={rating}
               emptySymbol={<FaRegStar/>} readonly placeholderSymbol={<FaStar/>}  fullSymbol={<FaStar/>}/>
                         </h2>
-      <h2  className="text-xl mb-3 font-bold">$ {price}</h2>
+      <h2  className="text-xl mb-3 font-bold">Price: $ {price}</h2>
+      <h2  className="text-xl mb-3 font-semibold">Avaiable: {quantity} pc</h2>
       <h2  className="text-xl mb-3">{sellerName}</h2>
       <h2  className="text-xl mb-3">{email}</h2>
 

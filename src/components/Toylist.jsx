@@ -13,7 +13,7 @@ const Toylist = ({ alltoy }) => {
     sellerName,
     email,
     img,
-    service,
+    quantity,
     price,
     rating,
   } = alltoy;
@@ -38,8 +38,8 @@ const Toylist = ({ alltoy }) => {
         </div>{" "}
       </th>
       <td className="text-center">
-        <div className="text-2xl mb-3">$ {price}</div>
-        <div className="text-xl inline-flex gap-2">
+        <div className="text-2xl ">$ {price}</div>
+        <div className="text-xl inline-flex gap-2 my-2">
           {rating}{" "}
           <Rating
             placeholderRating={rating}
@@ -49,6 +49,7 @@ const Toylist = ({ alltoy }) => {
             fullSymbol={<FaStar />}
           />
         </div>
+        <div className="text-2xl ">Qty: {quantity} </div>
       </td>
       <td>
         <div className="text-2xl mb-3">{sellerName}</div>

@@ -17,7 +17,7 @@ const ReactTabRow = ({alltoy}) => {
       } = alltoy;
 
     return (
-       <tr>
+       <tr className="reactTab">
       <td>
         <div className="avatar">
           <div className="rounded w-40 mask mask-squircle">
