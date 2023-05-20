@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import ReactTab from "./ReactTab";
 import useTitle from "../../hooks/useTitle";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import ReactTab from "../ReactTab/ReactTab";
 
 const Homepage = () => {
   useEffect(() => {
@@ -30,7 +30,7 @@ const Homepage = () => {
       
 
       <div data-aos="fade-up" data-aos-duration="1000">
-        <ReactTab/>
+        <ReactTab/>        
       </div>
       
     </div>
