@@ -33,8 +33,8 @@ const Add_A_Toy = () => {
         }
         console.log(addAToy);
     
-        fetch('http://localhost:5000/mytoys/', {
-            method: 'post',
+        fetch('https://mini-wheels-server-gamma.vercel.app/mytoys/', {
+            method: 'POST',
             headers: {
                 'content-type' : 'application/json'
             },

@@ -6,7 +6,7 @@ const ReactTab = () => {
   const [activeTab, setActiveTab] = useState('Toy SUV');
 
   useEffect(() => {
-    fetch("http://localhost:5000/toylist")
+    fetch("https://mini-wheels-server-gamma.vercel.app/toylist")
       .then((res) => res.json())
       .then((data) => setAlltoys(data));
   }, []);

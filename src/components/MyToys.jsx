@@ -18,7 +18,7 @@ const MyToys = () => {
 
   const fetchData = async () => {
     try {
-      const url = `http://localhost:5000/mytoys?email=${user?.email}&sort=${sortOrder}`;
+      const url = `https://mini-wheels-server-gamma.vercel.app/mytoys?email=${user?.email}&sort=${sortOrder}`;
       const response = await fetch(url);
       const data = await response.json();
       setMyToys(data);
@@ -35,20 +35,13 @@ const MyToys = () => {
     setSortOrder('desc');
   };
 
-  // const url = `http://localhost:5000/mytoys?email=${user?.email}`;
-  // useEffect(() => {
-  //   fetch(url)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //         setMyToys(data)}
-  //     );
-  // }, [url]);
+  
 
 
   const handleDelete = _id => {
     const proceed = confirm('Are you sure you want to delete?');
     if (proceed) {
-        fetch(`http://localhost:5000/mytoys/${_id}`, {
+        fetch(`https://mini-wheels-server-gamma.vercel.app/mytoys/${_id}`, {
             'method': 'DELETE'
         })
         .then(res => res.json())

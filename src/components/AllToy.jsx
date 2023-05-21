@@ -14,22 +14,18 @@ const AllToy = () => {
   }
   
   useEffect(() => {
-    fetch("http://localhost:5000/toylist")
+    fetch("https://mini-wheels-server-gamma.vercel.app/toylist")
       .then((res) => res.json())
       .then((data) => setAlltoys(data));
   }, []);
 
   const handleSearch = () => {
-    fetch(`http://localhost:5000/toysearchTitle/${searchText}`)
+    fetch(`https://mini-wheels-server-gamma.vercel.app/toysearchTitle/${searchText}`)
       .then((res) => res.json())
       .then((data) => setAlltoys(data));
   }
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:5000/toysearchTitle/${searchText}`)
-  //     .then((res) => res.json())
-  //     .then((data) => setAlltoys(data));
-  // }, []);
+  
 
 
 
