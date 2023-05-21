@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/mytoys/update/:_id",
-        element: <Update></Update>,
+        element: <PrivateRoute><Update></Update></PrivateRoute>,
         loader: ({params}) => fetch(`https://mini-wheels-server-gamma.vercel.app/mytoys/${params._id}`)
       },
       {

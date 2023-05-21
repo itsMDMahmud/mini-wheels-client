@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import SocialLogin from "./SocialLogin";
@@ -8,6 +8,7 @@ import useTitle from "../hooks/useTitle";
 const Login = () => {
   useTitle('Login');
   const { signIn } = useContext(AuthContext);
+  const [error, setError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -26,10 +27,13 @@ const Login = () => {
         
         console.log(user);
         navigate(from, {replace: true})
-
+        setError('');
         
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        setError(error.message);
+      });
   };
 
   return (
@@ -43,6 +47,7 @@ const Login = () => {
             <form onSubmit={handleLogin}>
             <div className="form-control">
             <h2 className="text-3xl font-bold text-center">Login</h2>
+            <p className="text-red-500 font-semibold">{error}</p>
               <label className="label">
                 <span className="label-text">Email</span>
               </label>

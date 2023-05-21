@@ -21,10 +21,10 @@ const Homepage = () => {
             src="https://i.ibb.co/hCCDrM5/7730137-1.jpg"
             className="w-full rounded-xl"
           />
-          <div className="absolute h-full w-full rounded-xl  pt-24 pb-24 gap-5 bg-gradient-to-b from-[#151515] to-[rgba(21, 21, 21, 0)] align-middle">
-            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" className="w-full text-white mobile:text-xl text-6xl  font-bold text-center">
+          <div className="absolute h-full w-full rounded-xl pt-5 md:pt-24 pb-24 gap-5 bg-gradient-to-b from-[#151515] to-[rgba(21, 21, 21, 0)] align-middle">
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" className="w-full text-white text-2xl md:text-6xl  font-bold text-center">
             “Children are the living messages <br className="firstbreak" /> we send to a time we will not see.” <br className="firstbreak" /> 
-            <small className="text-4xl">– John F. Kennedy</small>
+            <small className="md:text-4xl text-xl">– John F. Kennedy</small>
             </h2>
           </div>
           <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 gap-5"></div>
