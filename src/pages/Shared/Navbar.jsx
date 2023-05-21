@@ -15,7 +15,7 @@ const Navbar = () => {
 
   const navItems =  <>
         <li><Link to='/' className=' text-xl font-semibold'>Home</Link></li>
-        <li><NavLink to='/alltoys' className=' text-xl font-semibold'>All Toys</NavLink></li>
+        <li><NavLink to='/alltoys' className=' text-xl font-semibold '>All Toys</NavLink></li>
         {user?.email ? 
         <>
           <li><NavLink to='/add' className=' text-xl font-semibold'>Add Toy</NavLink></li>

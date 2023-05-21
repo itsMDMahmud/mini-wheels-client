@@ -4,6 +4,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import ReactTab from "../ReactTab/ReactTab";
 import Slider from "./Slider";
+import Contact from "./Contact";
+import CustomerReview from "./CustomerReview";
 
 const Homepage = () => {
   useEffect(() => {
@@ -36,6 +38,22 @@ const Homepage = () => {
       
       <div className="mt-20" data-aos="fade-up" data-aos-duration="1000">
           <Slider/>
+      </div>
+      <div className="form-and-review">
+      <div >
+        <div className="mt-20" data-aos="fade-up" data-aos-duration="1000">
+          <h2 className="text-5xl font-semibold text-center">Contact form</h2>
+          <p className="text-xl font-semibold text-center mt-3">Feel free to contact us</p>
+        </div>
+        <Contact/>
+      </div>
+      <div className="mt-20" data-aos="fade-up" data-aos-duration="1000">
+        <div>
+          <h2 className="text-5xl font-semibold text-center">Customer Review</h2>
+          <p className="text-xl font-semibold text-center mt-3">You can review us</p>
+        </div>
+        <CustomerReview/>
+      </div>
       </div>
     </div>
   );
