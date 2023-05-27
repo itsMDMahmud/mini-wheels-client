@@ -29,19 +29,19 @@ const ReactTab = () => {
         {/* Tabs */}
         <div className="flex justify-center space-x-4">
           <button
-            className={`border-b-2 border-transparent btn focus:outline-none ${activeTab === 'Toy SUV' ? 'btn' : 'btn btn-outline font-semibold text-lg'}`}
+            className={`border-b-2 border-transparent btn focus:outline-none  ${activeTab === 'Toy SUV' ? 'btn bg-[#1a2836]' : 'btn btn-outline font-semibold text-lg'}`}
             onClick={() => handleTabClick('Toy SUV')}
           >
            Toy SUV
           </button>
           <button
-            className={`border-b-2 border-transparent btn focus:outline-none ${activeTab === 'Toy car' ? 'btn' : 'btn btn-outline font-semibold text-lg'}`}
+            className={`border-b-2 border-transparent btn focus:outline-none ${activeTab === 'Toy car' ? 'btn bg-[#1a2836]' : 'btn btn-outline font-semibold text-lg'}`}
             onClick={() => handleTabClick('Toy car')}
           >
             toy car
           </button>
           <button
-            className={`border-b-2 border-transparent btn focus:outline-none ${activeTab === 'Toy truck' ? 'btn' : 'btn btn-outline font-semibold text-lg '}`}
+            className={`border-b-2 border-transparent btn focus:outline-none ${activeTab === 'Toy truck' ? 'btn bg-[#1a2836]' : 'btn btn-outline font-semibold text-lg '}`}
             onClick={() => handleTabClick('Toy truck')}
           >
             Toy truck

@@ -19,6 +19,14 @@ const AllToy = () => {
       .then((data) => setAlltoys(data));
   }, []);
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      // Perform the search action here
+      handleSearch();
+      
+    }
+  };
+
   const handleSearch = () => {
     fetch(`https://mini-wheels-server-gamma.vercel.app/toysearchTitle/${searchText}`)
       .then((res) => res.json())
@@ -33,7 +41,7 @@ const AllToy = () => {
     <div>
       <div class="max-w-md mx-auto my-5">
         <div class="flex items-center">
-          <input type="text" onChange={(event) => setSearchText(event.target.value)}
+          <input type="text" onKeyDown={handleKeyPress} onChange={(event) => setSearchText(event.target.value)}
           placeholder="Search" class="w-full px-4 py-2 mr-2 rounded-lg border-2 border-gray-300 focus:border-blue-500 focus:outline-none" />
           <button onClick={handleSearch} class="px-4 py-2 bg-[#1a2836] text-white rounded-lg hover:bg-gray-600">Search</button>
         </div>

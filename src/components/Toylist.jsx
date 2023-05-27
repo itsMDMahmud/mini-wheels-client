@@ -57,7 +57,7 @@ const Toylist = ({ alltoy }) => {
       </td>
       <th className="">
         <Link to={`details/${_id}`}>
-          <button className="btn">Details</button>
+          <button className="btn bg-[#1a2836]">Details</button>
         </Link>
       </th>
     </tr>

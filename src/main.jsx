@@ -16,3 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 // #c0392b main colour
 // #1a2836 dark blue
+// const handleKeyPress = (event) => {
+//     if (event.key === 'Enter') {
+//       // Perform the search action here
+//       performSearch();
+//     }
+//   };
